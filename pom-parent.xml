@@ -386,7 +386,9 @@
     </build>
 
     <profiles>
-            <!-- All the modules that require nothing but JBoss Enterprise Application Platform or JBoss EAP -->
+        <profile>
+            <!-- All the modules that require nothing but JBoss Enterprise
+                    Application Platform or JBoss EAP -->
             <id>default</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -469,12 +471,6 @@
                 <module>xml-jaxp</module>
             </modules>
         </profile>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        <profile>
         <profile>
             <!-- All the quickstarts that require Postgres to be running -->
             <id>requires-postgres</id>
