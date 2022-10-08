@@ -9,7 +9,7 @@
        - name: Run Docker container using simple-docker-image
          docker_container:
             name: kitchensinkapp
-            image: learndevops083/kitchensinkapp
+            image: learndevops083/kitchensinkapp:latest
             state: started
             recreate: yes
             detach: true
