@@ -4,12 +4,12 @@
   tasks: 
        - name: "pull docker image"
          community.docker.docker_image:
-            name: learndevops083/kitchensinkapp
+            name: learndevops083/Kitchensinkapp
             source: pull
        - name: Run Docker container using simple-docker-image
          docker_container:
-            name: kitchensinkapp
-            image: learndevops083/kitchensinkapp:latest
+            name: Kitchensinkapp
+            image: learndevops083/Kitchensinkapp:latest
             state: started
             recreate: yes
             detach: true
