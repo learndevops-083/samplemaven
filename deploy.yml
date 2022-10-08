@@ -1,0 +1,17 @@
+---
+- hosts: qa
+  become: yes
+  tasks: 
+       - name: "pull docker image"
+         community.docker.docker_image:
+            name: learndevops083/kitchensinkapp
+            source: pull
+       - name: Run Docker container using simple-docker-image
+         docker_container:
+            name: kitchensinkapp
+            image: learndevops083/kitchensinkapp
+            state: started
+            recreate: yes
+            detach: true
+            ports:
+              - "8888:8080"
