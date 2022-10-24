@@ -8,15 +8,15 @@
             state: started 
        - name: "pull docker image"
          docker_image:
-            name: learndevops083/Kitchensinkapp
+            name: bloomytech/my-webpage
             source: pull
-            command: docker pull learndevops083/Kitchensinkapp
+            command: docker pull bloomytech/my-webpage
             
             
        - name: Run Docker container using simple-docker-image
          docker_container:
             name: Kitchensinkapp
-            image: learndevops083/Kitchensinkapp
+            image: bloomytech/my-webpage
             state: started
             recreate: yes
             detach: true
