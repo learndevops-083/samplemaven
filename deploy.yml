@@ -2,10 +2,15 @@
 - hosts: qa
   become: yes
   tasks: 
+       - name : start Docker service 
+         service: 
+            name: Docker 
+            state: started 
        - name: "pull docker image"
-         community.docker.docker_image:
+         docker_image:
             name: learndevops083/Kitchensinkapp
             command: docker pull learndevops083/Kitchensinkapp
+            
        - name: Run Docker container using simple-docker-image
          docker_container:
             name: Kitchensinkapp
