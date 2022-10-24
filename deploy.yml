@@ -9,12 +9,13 @@
        - name: "pull docker image"
          docker_image:
             name: learndevops083/Kitchensinkapp
+            source: pull
             command: docker pull learndevops083/Kitchensinkapp
+            
             
        - name: Run Docker container using simple-docker-image
          docker_container:
             name: Kitchensinkapp
-            source: pull
             image: learndevops083/Kitchensinkapp
             state: started
             recreate: yes
